@@ -20,14 +20,8 @@ app.get('/', (req, res, next) => {
         })
     }
     );
-    res.sendFile(path.join(__dirname, 'public', 'Strona gwna.html'));
+    res.sendFile(path.join(__dirname, 'Strona gwna.html'));
     next();
-});
-
-// Define another route for GET requests with a parameter
-app.get('/user/:id', (req, res) => {
-  const userId = req.params.id;
-  res.send(`User ID: ${userId}`);
 });
 
 // Start the server
