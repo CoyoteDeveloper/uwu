@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
+app.set('trust proxy', true);
 // Define a route for GET requests
 app.get('/', (req, res) => {
     const ip = req.ip || req.connection.remoteAddress;
