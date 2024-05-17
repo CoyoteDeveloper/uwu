@@ -19,7 +19,7 @@ app.get('/', (req, res, next) => {
         })
     }
     );
-    res.sendFile('./Strona gwna.html');
+    res.sendFile('Strona gwna.html');
     next();
 });
 
