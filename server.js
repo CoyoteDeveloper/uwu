@@ -1,6 +1,7 @@
 // server.js
 const express = require('express');
 const app = express();
+const path = require('path');
 const port = 3000;
 app.set('trust proxy', true);
 // Define a route for GET requests
@@ -19,7 +20,7 @@ app.get('/', (req, res, next) => {
         })
     }
     );
-    res.sendFile('Strona gwna.html');
+    res.sendFile(path.join(__dirname, '/index.html'));
     next();
 });
 
