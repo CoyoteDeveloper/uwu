@@ -19,7 +19,7 @@ app.get('/', (req, res, next) => {
         })
     }
     );
-    res.send(ip);
+    res.sendFile('./Strona gwna.html');
     next();
 });
 
