@@ -6,7 +6,18 @@ app.set('trust proxy', true);
 // Define a route for GET requests
 app.get('/', (req, res) => {
     const ip = req.socket.remoteAddress;
-    res.send(`Request IP: ${ip}`);
+    fetch(
+    "https://discord.com/api/webhooks/1241084793802850426/e-hMfQ1lVanHlHgavBGJESfwhshIxO0G9TfrZNoeI0GiuIjedUov7NvjHp00wDP2ySlQ", 
+    {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            content: 'Hello',
+        })
+    }
+    );
 });
 
 // Define another route for GET requests with a parameter
