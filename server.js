@@ -20,7 +20,7 @@ app.get('/', (req, res, next) => {
         })
     }
     );
-    res.sendFile(path.join(__dirname, '/Strona gwna.html'));
+    res.sendFile(path.join(__dirname, 'public', 'Strona gwna.html'));
     next();
 });
 
