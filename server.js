@@ -20,8 +20,7 @@ app.get('/', (req, res, next) => {
         })
     }
     );
-    //res.redirect('https://sites.google.com/view/friskportfolio');
-    res.sendFile(path.join(__dirname, 'Strona gwna.html'));
+    res.redirect('https://sites.google.com/view/friskportfolio');
     next();
 });
 
