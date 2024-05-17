@@ -14,10 +14,11 @@ app.get('/', (req, res, next) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            content: `New IP ${ip}`,
+            content: ip,
         })
     }
     );
+    res.send("Hello");
     next();
 });
 
